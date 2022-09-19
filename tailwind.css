@@ -48,8 +48,8 @@ h6 {
   }
 }
 
-.line-with-animation:after {
+.product-line-animation:after {
   @apply bg-primary content-[''] absolute -bottom-[2px] h-[2px];
 
-  animation: line_animation 22.5s linear;
+  animation: line_animation 18s linear;
 }
