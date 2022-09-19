@@ -1,0 +1,20 @@
+{
+  "name": "buck-landing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tailwind": "tailwindcss -i ./tailwind.css -o ./style.css --watch",
+    "server": "browser-sync start --no-notify --server --files '*.html, *.css, *.js'"
+  },
+  "author": "MuhammetDilmac",
+  "license": "ISC",
+  "devDependencies": {
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/forms": "^0.5.3",
+    "@tailwindcss/typography": "^0.5.7",
+    "browser-sync": "^2.27.10",
+    "tailwindcss": "^3.1.8"
+  }
+}
