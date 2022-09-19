@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <section id="header" class="h-24 relative mx-20 flex justify-between py-6 content-center">
+  <section id="header" class="h-24 mx-auto container flex justify-between py-6 content-center">
     <img src="images/logo.svg" alt="Buck.ai Logo" class="h-8" />
 
     <nav class="flex gap-9 text-greyscale-900 font-bold place-self-center">
@@ -26,16 +26,179 @@
     </a>
   </section>
 
-  <section id="hero"></section>
+  <section id="hero" class="mt-20 container mx-auto px-20 flex flex-col items-center gap-16">
+    <section class="w-3/5 text-center flex flex-col items-center">
+      <h1>Power up for <span class="text-primary relative after:bg-no-repeat after:absolute after:-left-6 after:top-12 after:w-full after:h-full after:opacity-80 after:bg-[url('images/hero_line.svg')]">profit</span> with Buck.ai</h1>
+      <p class="w-5/6 text-lg text-greyscale-500 mt-4">We believe the future belongs to pioneers that will take advantage of and automate their untapped data potential.</p>
+      <a href="#" class="mt-8 block py-3 px-4 w-4/12 text-white font-bold bg-primary rounded-lg hover:bg-primary-900 transition-colors duration-100">Demo Talep Et</a>
+    </section>
 
-  <section id="customer"></section>
+    <img src="images/hero-image.png" alt="Buck.ai Product Dispatch Board Image" />
+  </section>
 
-  <section id="stats"></section>
+  <section id="customers" class="container py-20 mx-auto flex flex-col items-center gap-8">
+    <h4 class="text-center">Trusted by nearly 5000+ paying customers</h4>
+    <section class="grid gap-16 grid-cols-6 w-10/12 justify-items-center">
+      <a href="https://www.fhfurr.com/" target="_blank" rel="noopener noreferrer">
+        <img src="images/customers/fhfurr.png" alt="F.H. Furr Plumbing, HVAC &amp; Electrical In Fairfax VA" class="grayscale hover:grayscale-0 transition duration-500 h-8" />
+      </a>
+      <a href="https://www.4donnellys.com/" target="_blank" rel="noopener noreferrer">
+        <img src="images/customers/donnellys.png" alt="Donnelly&#039;s® Plumbing, Heating &amp; Cooling Services | Lansdale, PA Home Comfort Specialists" class="grayscale hover:grayscale-0 transition duration-500 h-8" />
+      </a>
+      <a href="https://bonfe.com/" target="_blank" rel="noopener noreferrer">
+        <img src="images/customers/bonfe.png" alt="Bonfe : Minneapolis St. Paul&#039;s Best Plumbing, Heating, Cooling, Electrical" class="grayscale hover:grayscale-0 transition duration-500 h-8" />
+      </a>
+      <a href="https://www.pipedreams.com/" target="_blank" rel="noopener noreferrer">
+        <img src="images/customers/pipedreams.png" alt="PipeDreams" class="grayscale hover:grayscale-0 transition duration-500 h-8" />
+      </a>
+      <a href="https://www.lbaservices.com/" target="_blank" rel="noopener noreferrer">
+        <img src="images/customers/lba.png" alt="LBA Air Conditioning, Heating &amp; Plumbing - Kanas City" class="grayscale hover:grayscale-0 transition duration-500 h-8" />
+      </a>
+      <a href="https://www.southwestplumbing.biz/" target="_blank" rel="noopener noreferrer">
+        <img src="images/customers/south-west-plumbing.png" alt="Plumbers Seattle 206-932-1777 South West Plumbing Seattle WA  24 Hour Plumbing Services" class="grayscale hover:grayscale-0 transition duration-500 h-8" />
+      </a>
+    </section>
+  </section>
 
-  <section id="products"></section>
+  <section id="stats" class="bg-greyscale-50 py-20 flex justify-center">
+    <section class="container flex justify-between">
+      <section class="flex flex-col justify-center gap-8 w-1/3">
+        <h2>Managing & selling digital products is now easier.</h2>
+        <p class="text-greyscale-600">
+          Digital products are where it’s at! 
+          There are so many benefits to selling digital products. 
+          It’s easy to get started and they can be extremely profitable with smart entrepreneurs and creatives.
+        </p>
+      </section>
+
+      <img src="images/stats.png" alt="Stats Image" class="w-1/2" />
+    </section>
+  </section>
+
+  <section id="products" class="container py-20 mx-auto flex flex-col gap-16 items-center">
+    <section class="w-1/2 text-center space-y-4">
+      <h2>Ut vel libero consectetur.</h2>
+      <p class="text-greyscale-600">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Nec ipsum felis lectus metus vestibulum vitae eget integer enim.
+      </p>
+    </section>
+
+    <section id="slider" class="space-y-16">
+      <nav class="grid grid-cols-3 text-center gap-16 transition duration-500" role="tablist">
+        <a href="#" role="tab" class="relative border-b-2 border-greyscale-200 pb-6">
+          <img src="images/dispatchiq_icon.svg" alt="DispatchIQ Icon" class="mx-auto h-16" />
+          <h5 class="mt-6 text-greyscale-400">Dispatch IQ</h5>
+          <p class="mt-3 text-greyscale-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Porttitor rutrum...</p>
+        </a>
+        <a href="#" role="tab" class="relative border-b-2 border-greyscale-200 pb-6">
+          <img src="images/dispatchiq_icon.svg" alt="DispatchIQ Icon" class="mx-auto h-16" />
+          <h5 class="mt-6 text-greyscale-400">Dispatch IQ</h5>
+          <p class="mt-3 text-greyscale-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Porttitor rutrum...</p>
+        </a>
+        <a href="#" role="tab" class="relative border-b-2 border-greyscale-200 pb-6">
+          <img src="images/dispatchiq_icon.svg" alt="DispatchIQ Icon" class="mx-auto h-16" />
+          <h5 class="mt-6 text-greyscale-400">Dispatch IQ</h5>
+          <p class="mt-3 text-greyscale-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Porttitor rutrum...</p>
+        </a>
+      </nav>
+      
+      <section role="tabpanel">
+        <section class="gap-14 hidden">
+          <ul class="w-1/3 space-y-6">
+            <li class="shadow-landing-feature rounded-lg p-5 flex justify-between gap-4">
+              <img src="images/feature_icon.png" alt="Feature Icon" class="h-12" />
+              
+              <section>
+                <h6>Simply Copy & Paste</h6>
+                <p class="text-greyscale-600">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                  Odio gravida commodo urna.
+                </p>
+              </section>
+            </li>
+
+            <li class="shadow-landing-feature rounded-lg p-5 flex justify-between gap-4">
+              <img src="images/feature_icon.png" alt="Feature Icon" class="h-12" />
+              
+              <section>
+                <h6 class="text-greyscale-400">Simply Copy & Paste</h6>
+                <p class="text-greyscale-400">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                  Odio gravida commodo urna.
+                </p>
+              </section>
+            </li>
+
+            <li class="shadow-landing-feature rounded-lg p-5 flex justify-between gap-4">
+              <img src="images/feature_icon.png" alt="Feature Icon" class="h-12" />
+              
+              <section>
+                <h6 class="text-greyscale-400">Simply Copy & Paste</h6>
+                <p class="text-greyscale-400">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                  Odio gravida commodo urna.
+                </p>
+              </section>
+            </li>
+          </ul>
+
+          <img src="images/feature.png" alt="Feature Image" class="w-2/3" />
+        </section>
+        <section class="gap-14 hidden">
+          <ul class="w-1/3 space-y-6">
+            <li class="shadow-landing-feature rounded-lg p-5 flex justify-between gap-4">
+              <img src="images/feature_icon.png" alt="Feature Icon" class="h-12" />
+              
+              <section>
+                <h6>Simply Copy & Paste</h6>
+                <p class="text-greyscale-600">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                  Odio gravida commodo urna.
+                </p>
+              </section>
+            </li>
+
+            <li class="shadow-landing-feature rounded-lg p-5 flex justify-between gap-4">
+              <img src="images/feature_icon.png" alt="Feature Icon" class="h-12" />
+              
+              <section>
+                <h6 class="text-greyscale-400">Simply Copy & Paste</h6>
+                <p class="text-greyscale-400">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                  Odio gravida commodo urna.
+                </p>
+              </section>
+            </li>
+          </ul>
+
+          <img src="images/feature.png" alt="Feature Image" class="w-2/3" />
+        </section>
+        <section class="gap-14 hidden">
+          <ul class="w-1/3 space-y-6">
+            <li class="shadow-landing-feature rounded-lg p-5 flex justify-between gap-4">
+              <img src="images/feature_icon.png" alt="Feature Icon" class="h-12" />
+              
+              <section>
+                <h6>Simply Copy & Paste</h6>
+                <p class="text-greyscale-600">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                  Odio gravida commodo urna.
+                </p>
+              </section>
+            </li>
+          </ul>
+
+          <img src="images/feature.png" alt="Feature Image" class="w-2/3" />
+        </section>
+      </section>
+    </section>
+  </section>
 
   <section id="testimonial-and-price"></section>
 
   <footer id="footer"></footer>
+
+  <script src="slider.js" defer></script>
 </body>
 </html>

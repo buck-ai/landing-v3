@@ -84,6 +84,9 @@ module.exports = {
           50: '#FDF2F8'
         },
         sky: '#43B3AC'
+      },
+      boxShadow: {
+        'landing-feature': '0px 4px 4px 0px #00000040'
       }
     },
   },

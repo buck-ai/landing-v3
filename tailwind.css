@@ -11,7 +11,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 { 
-  @apply font-bold;
+  @apply font-bold text-greyscale-900;
 }
 
 h1 {
@@ -38,3 +38,18 @@ h6 {
   @apply text-lg;
 }
 
+@keyframes line_animation {
+  from {
+    @apply left-1/2 w-0;
+  }
+
+  to {
+    @apply left-0 w-full;
+  }
+}
+
+.line-with-animation:after {
+  @apply bg-primary content-[''] absolute -bottom-[2px] h-[2px];
+
+  animation: line_animation 22.5s linear;
+}
