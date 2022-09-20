@@ -29,12 +29,13 @@ const formSubmitHandler = event => {
 const formData = () => {
   let data = Object.fromEntries(new FormData(form))
   
-  data.company = { Name: data['company[Name]'], 'No Employee': data['company[No Employee]'].toString() }
+  data.company = { Name: data['company[Name]'], 'No Employee': data['company[No Employee]'].toString(), 'Source (From)': data['company[Source (From)]'] }
   data['ServiceTitan User'] = data['ServiceTitan User'] === 'on'
   data['Nexstar Member'] = data['Nexstar Member'] === 'on'
 
   delete data['company[Name]']
   delete data['company[No Employee]']
+  delete data['company[Source (From)]']
   delete data.terms
 
   return data
