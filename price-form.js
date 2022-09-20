@@ -32,15 +32,18 @@ const formData = () => {
   data.company = { 
     Name: data['company[Name]'], 
     'No Employee': data['company[No Employee]'].toString(), 
-    'Source (From)': data['company[Source (From)]'] 
+    'Source (From)': data['company[Source (From)]'] ,
+    'CRM': data['company[CRM]'],
+    'Standardize Jobs': data['company[Standardize Jobs]'] === 'on',
+    'Nexstar Membership': data['company[Nexstar Member]'] === 'on'
   }
-  data['ServiceTitan User'] = data['ServiceTitan User'] === 'on'
-  data['Nexstar Member'] = data['Nexstar Member'] === 'on'
 
   delete data['company[Name]']
   delete data['company[No Employee]']
   delete data['company[Source (From)]']
-  delete data.terms
+  delete data['company[CRM]']
+  delete data['company[Standardize Jobs]']
+  delete data['company[Nexstar Member]']
 
   return data
 }

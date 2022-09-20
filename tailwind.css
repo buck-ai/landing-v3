@@ -57,3 +57,7 @@ h6 {
 label:has(+ input[required]) {
   @apply after:content-['*'] after:text-error-300;
 }
+
+label:has(+ select[required]) {
+  @apply after:content-['*'] after:text-error-300;
+}
