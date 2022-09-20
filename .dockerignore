@@ -1,0 +1,10 @@
+node_modules/
+build/
+.git/
+tailwind.config.js
+README.md
+package.json
+package-lock.json
+.gitignore
+.vscode
+tailwind.css
