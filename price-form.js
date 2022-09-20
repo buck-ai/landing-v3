@@ -2,6 +2,10 @@ let form           = null
 let priceText      = null
 let bookDemoButton = null
 
+function sleep (time) {
+  return new Promise((resolve) => setTimeout(resolve, time));
+}
+
 const formSubmitHandler = event => {
   event.preventDefault()
 
@@ -19,6 +23,7 @@ const formSubmitHandler = event => {
     automatedElement.classList.add('flex')
   }
 
+  sleep(1000).then(() => { fwcrm.identify(data) })
   fwcrm.identify(data)
 
   let formatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 2 })
