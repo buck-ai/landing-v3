@@ -958,6 +958,10 @@ select {
   height: 2.5rem;
 }
 
+.h-auto {
+  height: auto;
+}
+
 .max-h-\[40rem\] {
   max-height: 40rem;
 }
