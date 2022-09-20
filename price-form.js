@@ -5,36 +5,24 @@ let bookDemoButton = null
 const formSubmitHandler = event => {
   event.preventDefault()
 
-  /*const data = formData()
+  const data = formData()
 
-  freshsales.identify(
-    data.Email, 
-    data, 
-    () => { 
-      FM.trackCustomEvent("Filled Get Price Form", data)
+  form.classList.add('hidden')
+  priceText.classList.remove('hidden')
+  priceText.classList.add('flex')
 
-      form.classList.add('hidden')
-      priceText.classList.remove('hidden')
-      priceText.classList.add('flex')
+  let monthlyFeeElement = document.getElementById('monthly-fee')
+  let automatedElement = document.getElementById('automated')
 
-      let monthlyFeeElement = document.getElementById('monthly-fee')
-      let automatedElement = document.getElementById('automated')
+  if ( data.company['Standardize Jobs'] ) {
+    automatedElement.classList.remove('hidden')
+    automatedElement.classList.add('flex')
+  }
 
-      if ( data.company['Standardize Jobs'] ) {
-        automatedElement.classList.remove('hidden')
-        automatedElement.classList.add('flex')
-      }
+  fwcrm.set({ company: data.company })
 
-      let formatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 2 })
-      monthlyFeeElement.textContent = formatter.format((data.Product === 'DispatchIQ' ? 60 : 100) * parseInt(data.company['No Employee']))
-    },
-    (error) => {
-      console.warn("Receive error")
-      console.warn(error)
-    }
-  )
-*/
-
+  let formatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 2 })
+  monthlyFeeElement.textContent = formatter.format((data.Product === 'DispatchIQ' ? 60 : 100) * parseInt(data.company['No Employee']))
 }
 
 const formData = () => {
@@ -62,7 +50,7 @@ const formData = () => {
 const bookDemoButtonHandler = event => {
   event.preventDefault()
 
-  FM.trackCustomEvent("Click Book a Call Button after Seeing Price", formData())
+  FM.trackCustomEvent("Click Book a Call Button after Seeing Price", { email: formData().Email })
 
   bookDemoButton.textContent = 'We get your request.'
   bookDemoButton.setAttribute('disabled', '')
