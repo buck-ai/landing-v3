@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 html {
-  @apply h-full;
+  @apply h-full scroll-smooth;
 }
 
 body {
@@ -52,4 +52,8 @@ h6 {
   @apply bg-primary content-[''] absolute -bottom-[2px] h-[2px];
 
   animation: line_animation 18s linear;
+}
+
+label:has(+ input[required]) {
+  @apply after:content-['*'] after:text-error-300;
 }

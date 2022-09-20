@@ -807,6 +807,16 @@ select {
   margin-right: auto;
 }
 
+.-mx-5 {
+  margin-left: -1.25rem;
+  margin-right: -1.25rem;
+}
+
+.-my-2 {
+  margin-top: -0.5rem;
+  margin-bottom: -0.5rem;
+}
+
 .mx-20 {
   margin-left: 5rem;
   margin-right: 5rem;
@@ -884,6 +894,10 @@ select {
   height: 1.25rem;
 }
 
+.h-6 {
+  height: 1.5rem;
+}
+
 .h-full {
   height: 100%;
 }
@@ -944,6 +958,10 @@ select {
   width: 1.25rem;
 }
 
+.w-6 {
+  width: 1.5rem;
+}
+
 .w-3 {
   width: 0.75rem;
 }
@@ -972,12 +990,12 @@ select {
   width: 100%;
 }
 
-.w-6 {
-  width: 1.5rem;
-}
-
 .\!w-6 {
   width: 1.5rem !important;
+}
+
+.max-w-7xl {
+  max-width: 80rem;
 }
 
 .flex-shrink {
@@ -1014,6 +1032,10 @@ select {
 
 .flex-col {
   flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .place-content-center {
@@ -1104,6 +1126,12 @@ select {
   margin-bottom: calc(2rem * var(--tw-space-y-reverse));
 }
 
+.space-x-6 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
 .place-self-center {
   place-self: center;
 }
@@ -1114,6 +1142,10 @@ select {
 
 .justify-self-center {
   justify-self: center;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .whitespace-nowrap {
@@ -1254,13 +1286,41 @@ select {
   padding-right: 0.75rem;
 }
 
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
 
+.py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
 .pb-6 {
   padding-bottom: 1.5rem;
+}
+
+.pt-20 {
+  padding-top: 5rem;
+}
+
+.pb-10 {
+  padding-bottom: 2.5rem;
 }
 
 .text-center {
@@ -1332,6 +1392,16 @@ select {
   color: rgb(152 162 179 / var(--tw-text-opacity));
 }
 
+.text-gray-500 {
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+
+.text-gray-400 {
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
+}
+
 .\!text-greyscale-900 {
   --tw-text-opacity: 1 !important;
   color: rgb(16 24 40 / var(--tw-text-opacity)) !important;
@@ -1350,11 +1420,6 @@ select {
 .text-gray-700 {
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity));
-}
-
-.text-gray-500 {
-  --tw-text-opacity: 1;
-  color: rgb(107 114 128 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -1443,6 +1508,7 @@ select {
 
 html {
   height: 100%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -1521,6 +1587,13 @@ h6 {
           animation: line_animation 18s linear;
 }
 
+label:has(+ input[required])::after {
+  --tw-text-opacity: 1;
+  color: rgb(255 113 113 / var(--tw-text-opacity));
+  --tw-content: '*';
+  content: var(--tw-content);
+}
+
 .placeholder\:text-greyscale-400::-moz-placeholder {
   --tw-text-opacity: 1;
   color: rgb(152 162 179 / var(--tw-text-opacity));
@@ -1581,6 +1654,11 @@ h6 {
   content: var(--tw-content);
 }
 
+.after\:content-\[\'\*\'\]::after {
+  --tw-content: '*';
+  content: var(--tw-content);
+}
+
 .hover\:border-primary-900:hover {
   --tw-border-opacity: 1;
   border-color: rgb(0 64 88 / var(--tw-border-opacity));
@@ -1598,6 +1676,16 @@ h6 {
 .hover\:text-primary-900:hover {
   --tw-text-opacity: 1;
   color: rgb(0 64 88 / var(--tw-text-opacity));
+}
+
+.hover\:text-gray-900:hover {
+  --tw-text-opacity: 1;
+  color: rgb(17 24 39 / var(--tw-text-opacity));
+}
+
+.hover\:text-gray-500:hover {
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
 }
 
 .hover\:grayscale-0:hover {
