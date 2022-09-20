@@ -918,6 +918,10 @@ select {
   max-height: 2rem;
 }
 
+.max-h-\[40rem\] {
+  max-height: 40rem;
+}
+
 .w-3\/5 {
   width: 60%;
 }
@@ -1164,6 +1168,10 @@ select {
   border-radius: 0.25rem;
 }
 
+.rounded-2xl {
+  border-radius: 1rem;
+}
+
 .border {
   border-width: 1px;
 }
@@ -1309,6 +1317,11 @@ select {
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+.py-24 {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 }
 
 .pb-6 {
@@ -1626,6 +1639,11 @@ label:has(+ input[required])::after {
 .after\:top-12::after {
   content: var(--tw-content);
   top: 3rem;
+}
+
+.after\:left-0::after {
+  content: var(--tw-content);
+  left: 0px;
 }
 
 .after\:h-full::after {
