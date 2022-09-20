@@ -13,7 +13,7 @@ const productProcessor = (product, productIndex) => {
 }
 
 const activateProduct = product => {
-  let productIcon        = product.querySelector('img')
+  let productIcon        = product.querySelector('.grayscale')
   let productTitle       = product.querySelector('h5')
   let productDescription = product.querySelector('p')
 
@@ -26,7 +26,7 @@ const activateProduct = product => {
 }
 
 const deactivateProduct = product => {
-  let productIcon        = product.querySelector('img')
+  let productIcon        = product.querySelector('.grayscale')
   let productTitle       = product.querySelector('h5')
   let productDescription = product.querySelector('p')
 
