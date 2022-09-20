@@ -5,7 +5,7 @@ let bookDemoButton = null
 const formSubmitHandler = event => {
   event.preventDefault()
 
-  const data = formData()
+  /*const data = formData()
 
   freshsales.identify(
     data.Email, 
@@ -33,7 +33,7 @@ const formSubmitHandler = event => {
       console.warn(error)
     }
   )
-
+*/
 
 }
 
