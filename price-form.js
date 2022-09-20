@@ -47,7 +47,7 @@ const bookDemoButtonHandler = event => {
 }
 
 (function() {
-  const form = document.getElementById('price-form')
+  form = document.getElementById('price-form')
   if ( !form ) return;
 
   form           = document.getElementById('price-form')
