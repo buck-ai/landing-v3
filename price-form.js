@@ -11,7 +11,7 @@ const formSubmitHandler = event => {
     data.Email, 
     data, 
     () => { 
-      freshsales.trackEvent("Filled Get Price Form", data)
+      FM.trackCustomEvent("Filled Get Price Form", data)
 
       form.classList.add('hidden')
       priceText.classList.remove('hidden')
@@ -43,7 +43,7 @@ const formData = () => {
 const bookDemoButtonHandler = event => {
   event.preventDefault()
 
-  freshsales.trackEvent("Click Book a Call Button after Seeing Price", formData())
+  FM.trackCustomEvent("Click Book a Call Button after Seeing Price", formData())
 }
 
 (function() {
