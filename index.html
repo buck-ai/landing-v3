@@ -259,45 +259,88 @@
           <p class="text-greyscale-600">Fill out your info below to</p>
         </section>
 
-        <form class="flex flex-col gap-4">
-          <div class="flex flex-col gap-2">
-            <label for="name" class="text-greyscale-900 font-semibold text-sm">Full Name</label>
-            <input type="text" placeholder="Your first and last name" class="placeholder:text-greyscale-400 py-2 px-3 border-greyscale-300 rounded-lg focus:ring-primary font-medium text-greyscale-900" />
-          </div>
-
-          <div class="flex flex-col gap-2">
-            <label for="email" class="text-greyscale-900 font-semibold text-sm">E-Mail Address</label>
-            <input type="email" placeholder="Enter your e-mail address" class="placeholder:text-greyscale-400 py-2 px-3 border-greyscale-300 rounded-lg focus:ring-primary font-medium text-greyscale-900" />
-          </div>
-
-          <div class="flex flex-col gap-2">
-            <label for="company" class="text-greyscale-900 font-semibold text-sm">Company Name</label>
-            <input type="text" placeholder="Enter your company name" class="placeholder:text-greyscale-400 py-2 px-3 border-greyscale-300 rounded-lg focus:ring-primary font-medium text-greyscale-900" />
-          </div>
-
-          <div class="flex flex-col gap-2">
-            <label for="technician-count" class="text-greyscale-900 font-semibold text-sm">Technician Count</label>
-            <input type="number" placeholder="How many technician do you have?" class="placeholder:text-greyscale-400 py-2 px-3 border-greyscale-300 rounded-lg focus:ring-primary font-medium text-greyscale-900" />
-          </div>
-
-          <div class="flex gap-2.5">
-            <div class="flex h-5 items-center">
-              <input id="service-titan" aria-describedby="comments-description" name="service-titan" type="checkbox" class="h-5 w-5 rounded border-grayscale-300 text-primary focus:ring-0 focus:ring-offset-0">
+        <form id="price-form" class="flex flex-col gap-4">
+          <div class="grid grid-cols-2 gap-4">
+            <div class="flex flex-col gap-2">
+              <label for="first_name" class="text-greyscale-900 font-semibold text-sm">First Name</label>
+              <input required id="first_name" name="First Name" type="text" placeholder="Your first name" class="placeholder:text-greyscale-400 py-2 px-3 border-greyscale-300 rounded-lg focus:ring-primary font-medium text-greyscale-900" />
             </div>
 
-            <label for="service-titan" class="text-greyscale-900 font-semibold text-sm">Are you using ServiceTitan?</label>
+            <div class="flex flex-col gap-2">
+              <label for="last_name" class="text-greyscale-900 font-semibold text-sm">Last Name</label>
+              <input required id="last_name" name="Last Name" type="text" placeholder="Your last name" class="placeholder:text-greyscale-400 py-2 px-3 border-greyscale-300 rounded-lg focus:ring-primary font-medium text-greyscale-900" />
+            </div>
           </div>
 
-          <div class="flex gap-2.5">
-            <div class="flex h-5 items-center">
-              <input id="terms" aria-describedby="comments-description" name="terms" type="checkbox" class="h-5 w-5 rounded border-grayscale-300 text-primary focus:ring-0 focus:ring-offset-0">
+          <div class="grid grid-cols-2 gap-4">
+            <div class="flex flex-col gap-2">
+              <label for="email" class="text-greyscale-900 font-semibold text-sm">E-Mail Address</label>
+              <input required type="email" id="email" name="Email" placeholder="Enter your e-mail address" class="placeholder:text-greyscale-400 py-2 px-3 border-greyscale-300 rounded-lg focus:ring-primary font-medium text-greyscale-900" />
             </div>
 
-            <label for="terms" class="text-greyscale-900 font-semibold text-sm">Terms of Aggrement</label>
+            <div class="flex flex-col gap-2">
+              <label for="phone" class="text-greyscale-900 font-semibold text-sm">Phone Number</label>
+              <input name="Mobile" id="phone" type="tel" placeholder="Enter your phone number" class="placeholder:text-greyscale-400 py-2 px-3 border-greyscale-300 rounded-lg focus:ring-primary font-medium text-greyscale-900" />
+            </div>
           </div>
 
-          <button type="submit" class="block py-3 px-4 text-white font-bold bg-primary rounded-lg hover:bg-primary-900 transition-colors duration-100">Get Your Price</button>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="flex flex-col gap-2">
+              <label for="company" class="text-greyscale-900 font-semibold text-sm">Company Name</label>
+              <input required id="company" name="company[Name]" type="text" placeholder="Enter your company name" class="placeholder:text-greyscale-400 py-2 px-3 border-greyscale-300 rounded-lg focus:ring-primary font-medium text-greyscale-900" />
+            </div>
+  
+            <div class="flex flex-col gap-2">
+              <label for="technician-count" class="text-greyscale-900 font-semibold text-sm">Technician Count</label>
+              <input required name="company[No Employee]" id="technician-count" type="number" placeholder="How many technician do you have?" class="placeholder:text-greyscale-400 py-2 px-3 border-greyscale-300 rounded-lg focus:ring-primary font-medium text-greyscale-900" />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-4">
+            <div class="flex gap-2.5">
+              <div class="flex h-5 items-center">
+                <input id="using-service-titan" aria-describedby="comments-description" name="ServiceTitan User" type="checkbox" class="h-5 w-5 rounded border-grayscale-300 text-primary focus:ring-0 focus:ring-offset-0">
+              </div>
+  
+              <label for="using-service-titan" class="text-greyscale-900 font-semibold text-sm">Are you using ServiceTitan?</label>
+            </div>
+  
+            <div class="flex gap-2 5">
+              <div class="flex h-5 items-center">
+                <input id="using-nexstar" aria-describedby="comments-description" name="Nexstar Member" type="checkbox" class="h-5 w-5 rounded border-grayscale-300 text-primary focus:ring-0 focus:ring-offset-0">
+              </div>
+  
+              <label for="using-nexstar" class="text-greyscale-900 font-semibold text-sm">Are you member of Nexstar?</label>
+            </div>
+  
+            <div class="flex gap-2.5">
+              <div class="flex h-5 items-center">
+                <input required id="accept-terms" aria-describedby="comments-description" name="terms" type="checkbox" class="h-5 w-5 rounded border-grayscale-300 text-primary focus:ring-0 focus:ring-offset-0">
+              </div>
+  
+              <label for="accept-terms" class="text-greyscale-900 font-semibold text-sm">Terms of Aggrement</label>
+            </div>
+          </div>
+
+          <button type="submit" class="flex justify-center items-center gap-2 py-3 px-4 text-white font-bold bg-primary rounded-lg hover:bg-primary-900 transition-colors duration-100">
+            <span>Get Your Price</span> 
+            <img src="images/arrow_icon.svg" alt="Arrow Icon" />
+          </button>
         </form>
+
+        <section id="price-text" class="hidden flex-col gap-8">
+          <section class="flex flex-col gap-3 items-center">
+            <h3>Your Monthly Fee:</h3>
+            <h1 class="text-primary">$250.00</h1>
+          </section>
+
+          <p class="text-greyscale-600">Price is an estimate. Actual may incur overages which will be billed weekly.</p>
+
+          <button id="book-a-demo" class="flex justify-center items-center gap-2 py-3 px-4 text-white font-bold bg-primary rounded-lg hover:bg-primary-900 transition-colors duration-100">
+            <span>Get Started & Book A Call</span> 
+            <img src="images/arrow_icon.svg" alt="Arrow Icon" />
+          </button>
+        </section>
       </section>
     </section>
   </section>
@@ -306,5 +349,7 @@
 
   <script src="product-slider.js" defer></script>
   <script src="testimonials-slider.js" defer></script>
+  <script src="price-form.js" defer></script>
+  <script chat="true" src="//fw-cdn.com/1145413/2208623.js" defer></script>
 </body>
 </html>

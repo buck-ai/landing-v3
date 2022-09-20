@@ -43,6 +43,51 @@ const insertControls = (controlsArea) => {
   })
 }
 
+const listenTestimonialsEvents = (cases) => {
+  controls.forEach(listenControlClickForActivate)
+  cases.forEach(listenCaseMouseOverForResetInterval)
+  cases.forEach(listenCaseMouseOutForStartInterval)
+}
+
+const listenControlClickForActivate = controlElement => {
+  controlElement.addEventListener('click', event => {
+    event.preventDefault()
+    event.stopPropagation()
+
+    if ( controlElement.classList.contains('active') ) return;
+
+    clearInterval(testimonialsInterval)
+
+    testimonialsInterval = null
+    currentCaseIndex     = controls.indexOf(controlElement) - 1
+    if ( testimonialsInterval === null ) testimonialsInterval = setInterval(startTestimonialsInterval, 5000)
+   
+    startTestimonialsInterval()
+  })
+}
+
+const listenCaseMouseOverForResetInterval = caseElement => { 
+  caseElement.addEventListener('mouseover', event => {
+    event.stopPropagation()
+
+    if ( caseElement.classList.contains('hidden') ) return;
+
+    clearInterval(testimonialsInterval)
+    
+    testimonialsInterval = null
+  })
+}
+
+const listenCaseMouseOutForStartInterval = caseElement => {
+  caseElement.addEventListener('mouseout', event => {
+    event.stopPropagation()
+
+    if ( caseElement.classList.contains('hidden') ) return;
+
+    if ( testimonialsInterval === null ) testimonialsInterval = setInterval(startTestimonialsInterval, 5000)
+  })
+}
+
 (function() {
   const slider = document.getElementById('testimonials')
   if ( !slider ) return;
@@ -55,4 +100,6 @@ const insertControls = (controlsArea) => {
 
   testimonialsInterval = setInterval(startTestimonialsInterval, 6000)
   startTestimonialsInterval()
+
+  listenTestimonialsEvents(cases)
 })();
