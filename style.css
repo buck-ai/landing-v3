@@ -1357,6 +1357,10 @@ select {
   padding: 0px;
 }
 
+.p-4 {
+  padding: 1rem;
+}
+
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
@@ -2038,6 +2042,10 @@ label:has(+ select[required])::after {
 
   .lg\:p-0 {
     padding: 0px;
+  }
+
+  .lg\:p-8 {
+    padding: 2rem;
   }
 
   .lg\:px-20 {
