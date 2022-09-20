@@ -135,6 +135,10 @@ const activateFeature = feature => {
   featureIcon.classList.add('!grayscale-0')
   featureTitle.classList.add('!text-greyscale-900')
   featureDescription.classList.add('!text-greyscale-600')
+
+  if ( !feature.dataset.image ) return;
+
+  feature.closest('.gap-14').querySelector('img:last-child').src = feature.dataset.image
 }
 
 const deactivateFeature = feature => {
