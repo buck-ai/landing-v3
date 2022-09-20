@@ -309,7 +309,7 @@
 
           <div class="flex gap-2.5">
             <div class="flex h-5 items-center">
-              <input required id="standardize-jobs" aria-describedby="comments-description" name="company[Standardize Jobs]" type="checkbox" class="h-5 w-5 rounded border-grayscale-300 text-primary focus:ring-0 focus:ring-offset-0">
+              <input id="standardize-jobs" aria-describedby="comments-description" name="company[Standardize Jobs]" type="checkbox" class="h-5 w-5 rounded border-grayscale-300 text-primary focus:ring-0 focus:ring-offset-0">
             </div>
 
             <label for="standardize-jobs" class="text-greyscale-900 font-semibold text-sm">I want Buck.ai to standardize my job-types and data</label>
@@ -317,10 +317,26 @@
 
           <div class="flex gap-2.5">
             <div class="flex h-5 items-center">
-              <input required id="using-nexstar" aria-describedby="comments-description" checked name="company[Nexstar Member]" type="checkbox" class="h-5 w-5 rounded border-grayscale-300 text-primary focus:ring-0 focus:ring-offset-0">
+              <input id="using-nexstar" aria-describedby="comments-description" checked name="company[Nexstar Member]" type="checkbox" class="h-5 w-5 rounded border-grayscale-300 text-primary focus:ring-0 focus:ring-offset-0">
             </div>
 
             <label for="using-nexstar" class="text-greyscale-900 font-semibold text-sm">Are you member of Nexstar?</label>
+          </div>
+
+          <div class="flex flex-col gap-2.5">
+            <label for="product" class="text-greyscale-900 font-semibold text-sm">Interested Buck.ai Product</label>
+            
+            <div class="flex items-center gap-4">
+              <div class="flex gap-2 items-center">
+                <input required id="product" name="product" value="DispatchIQ" type="radio" checked class="h-4 w-4 border-gray-300 text-primary-600 focus:ring-primary-500">
+                <label for="product" class="block text-sm font-medium text-gray-700">only DispatchIQ</label>
+              </div>
+        
+              <div class="flex gap-2 items-center">
+                <input required id="product" name="product" value="Buck.ai Bundle" type="radio" class="h-4 w-4 border-gray-300 text-primary-600 focus:ring-primary-500">
+                <label for="product" class="block text-sm font-medium text-gray-700">Buck.ai Bundle(DispatchIQ, CallIQ & InsightsIQ)</label>
+              </div>
+            </div>
           </div>
 
           <input type="hidden" name="company[Source (From)]" value="Homepage Form" />
@@ -332,9 +348,11 @@
         </form>
 
         <section id="price-text" class="hidden flex-col gap-8">
-          <section class="flex flex-col gap-3 items-center">
-            <h3>Your Monthly Fee:</h3>
-            <h1 class="text-primary">$250.00</h1>
+          <section class="flex flex-col gap-3 items-stretch">
+            <p class="border-b border-greyscale-400 border-dashed flex justify-between text-base">Your Monthly Fee:<span id="monthly-fee" class="text-primary text-xl">250,00$</span></p>
+            <p class="border-b border-greyscale-400 border-dashed flex justify-between text-base">Your Onboarding: <span class="text-primary text-xl">4,000.00$</span></p>
+            <p class="border-b border-greyscale-400 border-dashed flex justify-between text-base">ROI: <span class="text-primary text-xl">8-12 months</span></p>
+            <p id="automated" class="flex border-b border-greyscale-400 border-dashed justify-between text-base">Automated Standardization of Historical Job Data: <span class="text-primary text-xl">5,000$</span></p>
           </section>
 
           <p class="text-greyscale-600">Price is an estimate. Actual may incur overages which will be billed weekly.</p>

@@ -16,6 +16,17 @@ const formSubmitHandler = event => {
       form.classList.add('hidden')
       priceText.classList.remove('hidden')
       priceText.classList.add('flex')
+
+      let monthlyFeeElement = document.getElementById('monthly-fee')
+      let automatedElement = document.getElementById('automated')
+
+      if ( data.company['Standardize Jobs'] ) {
+        automatedElement.classList.remove('hidden')
+        automatedElement.classList.add('flex')
+      }
+
+      let formatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 2 })
+      monthlyFeeElement.textContent = formatter.format((data.deal.Product === 'DispatchIQ' ? 60 : 100) * parseInt(data.company['No Employee']))
     },
     (error) => {
       console.warn("Receive error")
@@ -37,6 +48,9 @@ const formData = () => {
     'Standardize Jobs': data['company[Standardize Jobs]'] === 'on',
     'Nexstar Membership': data['company[Nexstar Member]'] === 'on'
   }
+  data.deal = {
+    "Product": data.product
+  }
 
   delete data['company[Name]']
   delete data['company[No Employee]']
@@ -44,6 +58,7 @@ const formData = () => {
   delete data['company[CRM]']
   delete data['company[Standardize Jobs]']
   delete data['company[Nexstar Member]']
+  delete data.product
 
   return data
 }
@@ -52,6 +67,11 @@ const bookDemoButtonHandler = event => {
   event.preventDefault()
 
   FM.trackCustomEvent("Click Book a Call Button after Seeing Price", formData())
+
+  bookDemoButton.textContent = 'We get your request.'
+  bookDemoButton.setAttribute('disabled', '')
+
+
 }
 
 (function() {
