@@ -195,10 +195,116 @@
     </section>
   </section>
 
-  <section id="testimonial-and-price"></section>
+  <section id="testimonial-and-price" class="bg-greyscale-900 py-20 flex justify-center">
+    <section class="container flex justify-between px-12">
+      <section class="flex flex-col justify-between w-5/12">
+        <section class="space-y-4">
+          <h2 class="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
+          <p class="text-greyscale-400">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Ac, sem scelerisque a, venenatis metus urna rutrum volutpat. 
+            Vel imperdiet libero, nulla dui urna velit feugiat nibh aliquam. 
+            Ut.
+          </p>
+        </section>
+
+        <section id="testimonials" class="flex flex-col gap-8">
+          <ul id="cases">
+            <li class="space-y-8 hidden">
+              <p class="italic text-lg before:content-['\22'] after:content-['\22'] text-white">I really enjoy my work and it makes me more productive, 
+                happier and more successful. 
+                The coworking place builds confidence and inspires greater performance and greater success for both employees and employers.</p>
+  
+              <section class="flex gap-4">
+                <img src="images/placeholder-avatar.png" alt="Author" class="h-12 w-12 rounded-full" />
+                <p class="flex flex-col">
+                  <span class="font-semibold text-white">Jenny Wilson</span>
+                  <span class="text-greyscale-400">Project Manager at Microsoft</span>
+                </p>
+              </section>
+            </li>
+            <li class="space-y-8 hidden">
+              <p class="italic text-lg before:content-['\22'] after:content-['\22'] text-white">I really enjoy my work and it makes me more productive, 
+                happier and more successful. 
+                The coworking place builds confidence and inspires greater performance and greater success for both employees and employers.</p>
+  
+              <section class="flex gap-4">
+                <img src="images/placeholder-avatar.png" alt="Author" class="h-12 w-12 rounded-full" />
+                <p class="flex flex-col">
+                  <span class="font-semibold text-white">Jenny Wilson</span>
+                  <span class="text-greyscale-400">Project Manager at Microsoft</span>
+                </p>
+              </section>
+            </li>
+            <li class="space-y-8 hidden">
+              <p class="italic text-lg before:content-['\22'] after:content-['\22'] text-white">Hop bala</p>
+  
+              <section class="flex gap-4">
+                <img src="images/placeholder-avatar.png" alt="Author" class="h-12 w-12 rounded-full" />
+                <p class="flex flex-col">
+                  <span class="font-semibold text-white">Jenny Wilson</span>
+                  <span class="text-greyscale-400">Project Manager at Microsoft</span>
+                </p>
+              </section>
+            </li>
+          </ul>
+
+          <ul id="controls" class="flex gap-1 transition-all duration-500"></ul>
+        </section>
+      </section>
+
+      <section id="pricing-form" class="bg-white w-5/12 rounded-lg shadow-pricing-form p-8 flex flex-col gap-9">
+        <section class="flex flex-col gap-3 text-center">
+          <h3>Learn the price for you</h3>
+          <p class="text-greyscale-600">Fill out your info below to</p>
+        </section>
+
+        <form class="flex flex-col gap-4">
+          <div class="flex flex-col gap-2">
+            <label for="name" class="text-greyscale-900 font-semibold text-sm">Full Name</label>
+            <input type="text" placeholder="Your first and last name" class="placeholder:text-greyscale-400 py-2 px-3 border-greyscale-300 rounded-lg focus:ring-primary font-medium text-greyscale-900" />
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <label for="email" class="text-greyscale-900 font-semibold text-sm">E-Mail Address</label>
+            <input type="email" placeholder="Enter your e-mail address" class="placeholder:text-greyscale-400 py-2 px-3 border-greyscale-300 rounded-lg focus:ring-primary font-medium text-greyscale-900" />
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <label for="company" class="text-greyscale-900 font-semibold text-sm">Company Name</label>
+            <input type="text" placeholder="Enter your company name" class="placeholder:text-greyscale-400 py-2 px-3 border-greyscale-300 rounded-lg focus:ring-primary font-medium text-greyscale-900" />
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <label for="technician-count" class="text-greyscale-900 font-semibold text-sm">Technician Count</label>
+            <input type="number" placeholder="How many technician do you have?" class="placeholder:text-greyscale-400 py-2 px-3 border-greyscale-300 rounded-lg focus:ring-primary font-medium text-greyscale-900" />
+          </div>
+
+          <div class="flex gap-2.5">
+            <div class="flex h-5 items-center">
+              <input id="service-titan" aria-describedby="comments-description" name="service-titan" type="checkbox" class="h-5 w-5 rounded border-grayscale-300 text-primary focus:ring-0 focus:ring-offset-0">
+            </div>
+
+            <label for="service-titan" class="text-greyscale-900 font-semibold text-sm">Are you using ServiceTitan?</label>
+          </div>
+
+          <div class="flex gap-2.5">
+            <div class="flex h-5 items-center">
+              <input id="terms" aria-describedby="comments-description" name="terms" type="checkbox" class="h-5 w-5 rounded border-grayscale-300 text-primary focus:ring-0 focus:ring-offset-0">
+            </div>
+
+            <label for="terms" class="text-greyscale-900 font-semibold text-sm">Terms of Aggrement</label>
+          </div>
+
+          <button type="submit" class="block py-3 px-4 text-white font-bold bg-primary rounded-lg hover:bg-primary-900 transition-colors duration-100">Get Your Price</button>
+        </form>
+      </section>
+    </section>
+  </section>
 
   <footer id="footer"></footer>
 
   <script src="product-slider.js" defer></script>
+  <script src="testimonials-slider.js" defer></script>
 </body>
 </html>
