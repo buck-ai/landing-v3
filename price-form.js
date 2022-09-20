@@ -48,9 +48,6 @@ const formData = () => {
     'Standardize Jobs': data['company[Standardize Jobs]'] === 'on',
     'Nexstar Membership': data['company[Nexstar Member]'] === 'on'
   }
-  data.deal = {
-    "Product": data.product
-  }
 
   delete data['company[Name]']
   delete data['company[No Employee]']
@@ -58,7 +55,6 @@ const formData = () => {
   delete data['company[CRM]']
   delete data['company[Standardize Jobs]']
   delete data['company[Nexstar Member]']
-  delete data.product
 
   return data
 }
