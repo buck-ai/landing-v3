@@ -23,8 +23,7 @@ const formSubmitHandler = event => {
     automatedElement.classList.add('flex')
   }
 
-  sleep(1000).then(() => { fwcrm.identify(data) })
-  fwcrm.identify(data)
+  sleep(2000).then(() => { fwcrm.set(data) })
 
   let formatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 2 })
   monthlyFeeElement.textContent = formatter.format((data.Product === 'DispatchIQ' ? 60 : 100) * parseInt(data.company['No Employee']))
