@@ -10,10 +10,10 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <section id="header" class="h-24 mx-auto container flex justify-between py-6 content-center">
+  <section id="header" class=" px-4 lg:px-0 h-24 mx-auto container flex justify-between py-6 items-center">
     <img src="images/logo.svg" alt="Buck.ai Logo" class="h-8" />
 
-    <nav class="flex gap-9 text-greyscale-900 font-bold place-self-center">
+    <nav class="hidden lg:flex gap-9 text-greyscale-900 font-bold place-self-center">
       <a href="#hero">About</a>
       <a href="#products">Products</a>
       <a href="#testimonial-and-price">Pricing</a>
@@ -27,7 +27,7 @@
 
   <section id="hero" class="mt-20 container mx-auto lg:px-20 flex flex-col items-center gap-16">
     <section class="w-full lg:w-3/5 text-center flex flex-col items-center px-4 lg:p-0">
-      <h1>Power up for <span class="text-primary relative after:bg-no-repeat after:absolute after:-left-6 after:top-12 after:w-full after:h-full after:opacity-80 after:bg-[url('images/hero_line.svg')]">profit</span></h1>
+      <h1>Power up for<span class="text-primary relative px-2 after:bg-no-repeat after:absolute after:-left-0 after:top-12 after:w-full after:h-full after:opacity-80 after:bg-[url('images/hero_line.svg')]">profit</span></h1>
       <p class="w-5/6 text-lg text-greyscale-500 mt-4">Work smarter, not harder, and achieve groundbreaking results with an automated intelligence platform that runs with your data, so you can be sure you're making the most intelligent decisions that maximize your revenue.</p>
       <a href="/demo.html" class="mt-8 block py-3 px-4 lg:w-4/12 text-white font-bold bg-primary rounded-lg hover:bg-primary-900 transition-colors duration-100">Schedule Demo</a>
     </section>
@@ -81,7 +81,7 @@
     </section>
 
     <section id="product-slider" class="space-y-16">
-      <nav class="grid grid-cols-1 lg:grid-cols-3 text-center gap-16 transition duration-500" role="tablist">
+      <nav class="grid grid-cols-1 lg:grid-cols-3 text-center gap-4 lg:gap-16 transition duration-500" role="tablist">
         <a href="#" role="tab" class="relative border-b-2 border-greyscale-200 pb-6">
           <div class="flex flex-row lg:flex-col justify-center items-center">
             <div class="h-10 lg:h-16 w-10 lg:w-16 lg:bg-primary-600/20 flex justify-center items-center rounded-2xl grayscale">
