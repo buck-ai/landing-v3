@@ -70,8 +70,6 @@ const bookDemoButtonHandler = event => {
 
   bookDemoButton.textContent = 'We get your request.'
   bookDemoButton.setAttribute('disabled', '')
-
-
 }
 
 (function() {
