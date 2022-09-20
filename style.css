@@ -854,6 +854,14 @@ select {
   margin-left: 0.5rem;
 }
 
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
 .block {
   display: block;
 }
@@ -1484,6 +1492,11 @@ select {
 .text-primary-600 {
   --tw-text-opacity: 1;
   color: rgb(46 123 148 / var(--tw-text-opacity));
+}
+
+.text-gray-800 {
+  --tw-text-opacity: 1;
+  color: rgb(31 41 55 / var(--tw-text-opacity));
 }
 
 .underline {
