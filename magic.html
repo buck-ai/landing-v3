@@ -10,10 +10,10 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <section id="header" class="h-24 mx-auto container flex justify-between py-6 content-center">
+  <section id="header" class="px-4 lg:px-0 h-24 mx-auto container flex justify-between py-6 content-center">
     <img src="images/logo.svg" alt="Buck.ai Logo" class="h-8" />
 
-    <nav class="flex gap-9 text-greyscale-900 font-bold place-self-center">
+    <nav class="hidden gap-9 text-greyscale-900 font-bold place-self-center">
       <a href="/#hero">About</a>
       <a href="/#products">Products</a>
       <a href="/#testimonial-and-price">Pricing</a>
@@ -25,18 +25,18 @@
     </a>
   </section>
 
-  <section id="hero" class="mt-20 container mx-auto px-20 flex flex-col items-center gap-16">
-    <section class="w-3/5 text-center flex flex-col items-center">
-      <h1>Nexstar Members, Win a Trip to <span class="text-primary relative after:bg-no-repeat after:absolute after:left-0 after:top-12 after:w-full after:h-full after:opacity-80 after:bg-[url('images/hero_line.svg')]">Paris</span></h1>
-      <p class="w-5/6 text-lg text-greyscale-500 mt-4">Paris is one of the most beautiful cities in the world. Try Buck.ai for six months and earn a chance to visit this magical city!</p>
+  <section id="hero" class="mt-20 container mx-auto lg:px-20 flex flex-col items-center gap-16">
+    <section class="w-full lg:w-3/5 px-4 lg:px-0 text-center flex flex-col items-center">
+      <h1>Nexstar Members, Win a Trip to<span class="text-primary relative px-2 after:bg-no-repeat after:absolute after:left-0 after:top-12 after:w-full after:h-full after:opacity-80 after:bg-[url('images/hero_line.svg')]">Paris</span></h1>
+      <p class="w-full lg:w-5/6 text-lg text-greyscale-500 mt-4">Paris is one of the most beautiful cities in the world. Try Buck.ai for six months and earn a chance to visit this magical city!</p>
     </section>
   </section>
 
-  <section class="container grid grid-cols-2 mx-auto py-24 items-center justify-items-center">
-    <img src="images/paris.jpg" alt="Paris Image" class="rounded-2xl max-h-[40rem]" />
+  <section class="container px-4 lg:px-0 grid grid-cols-1 lg:grid-cols-2 mx-auto py-24 items-center justify-items-center">
+    <img src="images/paris.jpg" alt="Paris Image" class="mb-16 lg:mb-0 rounded-2xl max-h-[40rem]" />
 
     <form id="price-form" class="flex flex-col gap-4">
-      <div class="grid grid-cols-2 gap-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div class="flex flex-col gap-2">
           <label for="first_name" class="text-greyscale-900 font-semibold text-sm">First Name</label>
           <input required id="first_name" name="First Name" type="text" placeholder="Enter your first name" class="placeholder:text-greyscale-400 py-2 px-3 border-greyscale-300 rounded-lg focus:ring-primary font-medium text-greyscale-900" />
@@ -53,7 +53,7 @@
         <input required id="title" name="Job title" type="text" placeholder="Enter your title" class="placeholder:text-greyscale-400 py-2 px-3 border-greyscale-300 rounded-lg focus:ring-primary font-medium text-greyscale-900" />
       </div>
 
-      <div class="grid grid-cols-2 gap-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div class="flex flex-col gap-2">
           <label for="email" class="text-greyscale-900 font-semibold text-sm">E-Mail Address</label>
           <input required type="email" id="email" name="Email" placeholder="Enter your e-mail address" class="placeholder:text-greyscale-400 py-2 px-3 border-greyscale-300 rounded-lg focus:ring-primary font-medium text-greyscale-900" />
@@ -65,7 +65,7 @@
         </div>
       </div>
 
-      <div class="grid grid-cols-2 gap-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div class="flex flex-col gap-2">
           <label for="company" class="text-greyscale-900 font-semibold text-sm">Company Name</label>
           <input required id="company" name="company[Name]" type="text" placeholder="Enter your company name" class="placeholder:text-greyscale-400 py-2 px-3 border-greyscale-300 rounded-lg focus:ring-primary font-medium text-greyscale-900" />
@@ -107,7 +107,7 @@
       <div class="flex flex-col gap-2.5">
         <label for="product" class="text-greyscale-900 font-semibold text-sm">Interested Buck.ai Product</label>
         
-        <div class="flex items-center gap-4">
+        <div class="flex flex-col gap-4">
           <div class="flex gap-2 items-center">
             <input required id="product" name="Product" value="DispatchIQ" type="radio" checked class="h-4 w-4 border-gray-300 text-primary-600 focus:ring-primary-500">
             <label for="product" class="block text-sm font-medium text-gray-700">only DispatchIQ</label>
