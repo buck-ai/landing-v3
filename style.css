@@ -1828,6 +1828,10 @@ label:has(+ select[required])::after {
   content: var(--tw-content);
 }
 
+.first\:hidden:first-child {
+  display: none;
+}
+
 .hover\:border-primary-900:hover {
   --tw-border-opacity: 1;
   border-color: rgb(0 64 88 / var(--tw-border-opacity));
