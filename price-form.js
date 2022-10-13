@@ -51,23 +51,12 @@ const formData = () => {
   return data
 }
 
-const bookDemoButtonHandler = event => {
-  event.preventDefault()
-
-  FM.trackCustomEvent("Click Book a Call Button after Seeing Price", { email: formData().Email })
-
-  bookDemoButton.textContent = 'We get your request.'
-  bookDemoButton.setAttribute('disabled', '')
-}
-
 (function() {
   form = document.getElementById('price-form')
   if ( !form ) return;
 
-  form           = document.getElementById('price-form')
-  priceText      = document.getElementById('price-text')
-  bookDemoButton = document.getElementById('book-a-demo')
+  form      = document.getElementById('price-form')
+  priceText = document.getElementById('price-text')
 
   form.addEventListener('submit', formSubmitHandler)
-  bookDemoButton.addEventListener('click', bookDemoButtonHandler)
 })();
