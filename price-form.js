@@ -26,7 +26,7 @@ const formSubmitHandler = event => {
   sleep(2000).then(() => { fwcrm.set(data) })
 
   let formatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 2 })
-  monthlyFeeElement.textContent = formatter.format((data.Product === 'DispatchIQ' ? 60 : 100) * parseInt(data.company['No Employee']))
+  monthlyFeeElement.textContent = formatter.format((data.Product === 'DispatchIQ' ? 75 : 100) * parseInt(data.company['No Employee']))
 }
 
 const formData = () => {
